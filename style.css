@@ -36,12 +36,16 @@ nav a:hover {
   width: 1200px;
   background-color: aliceblue;
   margin: auto;
+  display: flex;
   padding: 20px;
+}
+#products {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
 }
+
 .product-card {
   width: 300px;
   height: 450px;
@@ -56,8 +60,6 @@ nav a:hover {
   height: 160px;
 }
 .product-details-container {
-  width: 480px;
-  height: 600px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -12,6 +12,7 @@ const loadCategoryProducts = (category) => {
 
 const displayProducts = (products) => {
   const parent = document.getElementById('products');
+  parent.innerHTML = '';
 
   products.forEach((product) => {
     // Create a new div for each product
@@ -43,6 +44,16 @@ const loadCategories = () => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      // const parent = document.getElementById('drop-category');
+      // data.forEach((category) => {
+      //   const li = document.createElement('li');
+      //   li.classList.add('dropdown-item');
+      //   li.innerHTML = `
+      //   <button onClick("loadCategoryProducts()")>${category}</button>
+      //   `;
+      //   parent.appendChild(li);
+      const parent = document.getElementById('drop-category');
+
       data.forEach((category) => {
         const li = document.createElement('li');
         li.classList.add('dropdown-item');
@@ -54,5 +65,6 @@ const loadCategories = () => {
       });
     });
 };
+
 loadProducts();
 loadCategories();
